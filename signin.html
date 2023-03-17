@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/bsrid/Downloads/login%20for%20app.html? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<style>
+		body{
+			background-color: lightseagreen;
+		}
+		#container{
+			height: 500px;
+			width: 500px;
+			background-color: lightgray;
+			position: absolute;
+			top: 100px;
+			left: 500px;
+			border: 3px darkgreen;
+
+		}
+		#text{
+			border: 2px green;
+			height: 35px;
+			width: 250px;
+            color: darkgreen;
+			position: relative;
+			top: 65px;
+			left: 125px;
+			border-radius: 20px;
+			text-align: center;
+			top: 60px;
+
+
+		}
+		#pwd{
+			height: 35px;
+			width: 250px;
+			border-radius: 20px;
+			border: 2px green;
+			text-align: center;
+			position: relative;
+			top: 95px;
+			left: 125px;
+
+		}
+		h1{
+			text-align: center;
+			position: relative;
+			top: 35px;
+			color: darkgreen;
+		}
+		h5{
+			position: relative;
+			top: 40px;
+			text-align: center;
+			color: yellowgreen;
+		}
+		#button{
+			height: 50px;
+			width: 250px;
+			position: relative;
+			top: 170px;
+			left: 125px;
+			color: darkgreen;
+			font-weight: bold;
+			font-size: 2em;
+			background-color: lightgreen;
+			border: 1px white;
+			text--align: center;
+		}
+		p{
+			color: green;
+			position: relative;
+			top: 185px;
+			left: 125px;
+		}
+		a{
+			position: relative;
+			top: 145px;
+			left: 240px;
+			color: darkgreen;
+			font-size: 130%;
+		}
+		#log{
+			font-size: 190%;
+			position: relative;
+			left: -38px;
+			top: 155px;
+
+		}
+
+
+	</style>
+	<title>Login page</title>
+</head>
+<body>
+	<div id="container">
+		<h1>LOGIN</h1>
+		<h5>Please enter your credentials to login.</h5>
+		<form action="file:///C:/Users/bsrid/Downloads/login%20for%20app.html?" method=" ">
+			<input id="text" type="text" placeholder="email">
+			<input id="pwd" type="password" placeholder="Password">
+			<input id="button" type="button"><a id="log" href="file:///C:/Users/bsrid/Downloads/home.html">LOGIN</a>
+	</form></div>
+<script src="js/annyang.min.js"></script>
+<script>
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'write email *tag': function(variable) {
+      let text = document.getElementById("text");
+      text.value = variable.split(" ").join("");
+    },
+     'write password *tag': function(variable) {
+      let pwd = document.getElementById("pwd");
+      pwd.value = variable.split(" ").join("");
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+</script>
+
+
+
+</body></html>
